@@ -41,11 +41,11 @@ jobs:
 
       # 部署到GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3.7.3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} # 这里的 ACTIONS_DEPLOY_KEY 则是上面设置 Private Key的变量名
-          external_repository: wzliy/wzliy.github.io # Pages 远程仓库 
+          destination_dir: docs # Pages 远程仓库 
           publish_dir: docs/.vuepress/dist
-          keep_files: false # remove existing files
           publish_branch: main  # deploying branch
+          keep_files: false # remove existing files
           commit_message: ${{ github.event.head_commit.message }}
