@@ -3,25 +3,53 @@ const { searchPlugin } = require('@vuepress/plugin-search')
 
 module.exports = {
   lang: 'zh-CN',
-  title: 'interviewGuide',
+  title: '面试指南',
   description: '面试指南',
   base: '/interviewGuide/',
+  // 配置默认主题
   theme: defaultTheme({
-    // 配置默认主题
+    // 导航栏配置
     navbar: [
-      // NavbarItem
       {
-        text: 'Foo',
-        link: '/foo/',
+        text: '首页',
+        link: '/',
       },
       // NavbarGroup
       {
-        text: 'Group',
-        children: ['/group/foo.md', '/group/bar.md'],
+        text: '主题',
+        children: ['/java/', '/redis/'],
       },
-      // 字符串 - 页面文件路径
-      '/bar/README.md',
     ],
+    // 仓库地址
+    repo: 'https://github.com/wzliy/interviewGuide.git',
+    editLink: false,
+    lastUpdated: false,
+    contributors: false,
+
+    // 侧边栏设置
+    sidebar: {
+      '/': [
+        {
+          text: '首页',
+          link: '/',
+        },
+        {
+          text: 'Java',
+          link: '/java/',
+          collapsible: true,
+          children: [
+            '/java/javaBasic.md',
+            '/java/concurrent.md',
+            '/java/JavaMultiThread.md',
+          ]
+        },
+        {
+          text: 'Redis',
+          link: '/redis/',
+        },
+      ],
+    },
+
   }),
   plugins: [
     searchPlugin({
