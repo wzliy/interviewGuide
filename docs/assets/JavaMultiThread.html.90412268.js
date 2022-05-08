@@ -1,0 +1,1 @@
+const a={key:"v-4bf1256c",path:"/java/JavaMultiThread.html",title:"\u591A\u7EBF\u7A0B",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"\u8FDB\u7A0B\u4E0E\u7EBF\u7A0B\u7684\u533A\u522B\u662F\u4EC0\u4E48\uFF1F",slug:"\u8FDB\u7A0B\u4E0E\u7EBF\u7A0B\u7684\u533A\u522B\u662F\u4EC0\u4E48",children:[]}],git:{},filePathRelative:"java/JavaMultiThread.md"};export{a as data};
