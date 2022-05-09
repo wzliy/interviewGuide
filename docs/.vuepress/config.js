@@ -36,7 +36,6 @@ module.exports = {
         {
           text: 'Java',
           link: '/java/',
-          collapsible: true,
           children: [
             '/java/javaBasic.md',
             '/java/concurrent.md',
@@ -46,6 +45,13 @@ module.exports = {
         {
           text: 'Redis',
           link: '/redis/',
+        },
+        {
+          text: '消息队列',
+          link: '/消息队列/',
+          children: [
+            '/消息队列/Kafka.md',
+          ]
         },
       ],
     },
