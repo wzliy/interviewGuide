@@ -63,7 +63,15 @@ Kafka使用分区的作用就是提供负载均衡的能力，实现系统的高
 
 分区策略就是决定生产者将消息发送到哪个分区的算法。Kafka为我们提供了默认的分区策略，同时也支持你自定义分区策略。
 
+**自定义分区策略**
 
+编写生产者程序时，编写一个具体的类实现`org.apache.kafka.clients.producer.Partitioner`接口。这个接口只定义了两个方法：partition()和close()，通常你只需要实现最重要的partition方法。
+
+```java
+int partition(String topic, Object key, byte[] keyBytes, Object value, byte[] valueBytes, Cluster cluster);
+```
+
+partition的方法签名：topic、key、keyBytes、value、valueBytes都属于消息数据，cluster则是集群消息（比如当前kafka集群共有多少个主题、多少Broker等）。你需要充分利用好这些信息，计算好你需要发送的分区。所以，你只要实现类定义好了partiton方法，同时设置partition.class参数为你自己实现类的Full Qualified Name，那么生产者程序就会按照你的代码逻辑对消息进行分区。 
 
 ### 生产者压缩算法
 
