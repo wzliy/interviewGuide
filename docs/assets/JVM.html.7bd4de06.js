@@ -1,0 +1,1 @@
+import{_ as a,o as t,c as r,F as c,a as e,d as s}from"./app.9cc73c32.js";const n={},o=e("h1",{id:"jvm",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#jvm","aria-hidden":"true"},"#"),s(" JVM")],-1),_=e("p",null,"JVM\uFF0Cjava\u865A\u62DF\u673A\u3002",-1);function d(l,h){return t(),r(c,null,[o,_],64)}var m=a(n,[["render",d],["__file","JVM.html.vue"]]);export{m as default};

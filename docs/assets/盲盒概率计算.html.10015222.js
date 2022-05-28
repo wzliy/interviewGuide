@@ -1,0 +1,1 @@
+const t={key:"v-6643850f",path:"/%E7%AE%97%E6%B3%95/%E7%9B%B2%E7%9B%92%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{},filePathRelative:"\u7B97\u6CD5/\u76F2\u76D2\u6982\u7387\u8BA1\u7B97.md"};export{t as data};
